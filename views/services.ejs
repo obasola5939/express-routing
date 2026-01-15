@@ -1,0 +1,70 @@
+<% layout('layout') -%>
+
+<!-- Services Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">Our Services</h1>
+        <p class="page-subtitle">Comprehensive solutions tailored to your business needs</p>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services">
+    <div class="container">
+        <div class="services-grid">
+            <% services.forEach(service => { %>
+            <div class="service-card">
+                <div class="service-header">
+                    <h3><%= service.name %></h3>
+                    <span class="service-price"><%= service.price %></span>
+                </div>
+                <div class="service-body">
+                    <p><%= service.description %></p>
+                    <ul class="service-features">
+                        <% service.features.forEach(feature => { %>
+                        <li><i class="fas fa-check-circle"></i> <%= feature %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <div class="service-footer">
+                    <a href="/contact" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                    <a href="/contact" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i> Get Started
+                    </a>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process">
+    <div class="container">
+        <h2 class="section-title">Our Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Consultation</h3>
+                <p>Understand your requirements and goals</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Planning</h3>
+                <p>Develop a customized strategy</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Execution</h3>
+                <p>Implement the solution with precision</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Support</h3>
+                <p>Provide ongoing maintenance and support</p>
+            </div>
+        </div>
+    </div>
+</section>
