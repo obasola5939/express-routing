@@ -1,0 +1,16 @@
+{
+  "name": "working-hours-app",
+  "version": "1.0.0",
+  "description": "A web app available only during working hours",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
