@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .maintenance-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 80px;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .time-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .time-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .time-item:last-child {
+            border-bottom: none;
+        }
+        
+        .working-hours {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .next-available {
+            background: #fff3e0;
+            color: #ef6c00;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <div class="icon">⏰</div>
+        <h1>Out of Service Hours</h1>
+        
+        <p>Our website is currently unavailable outside of our regular working hours.</p>
+        
+        <div class="time-info">
+            <div class="time-item">
+                <strong>Current Day:</strong>
+                <span><%= currentDay %></span>
+            </div>
+            <div class="time-item">
+                <strong>Current Time:</strong>
+                <span><%= currentTime %></span>
+            </div>
+        </div>
+        
+        <div class="working-hours">
+            <i class="fas fa-clock"></i>
+            Working Hours: <%= workingDays %>, <%= workingHours %>
+        </div>
+        
+        <div class="next-available">
+            <i class="fas fa-calendar-alt"></i>
+            Next Available: <%= nextWorkingDay %> at 9:00 AM
+        </div>
+        
+        <div class="contact-info">
+            <p>For urgent matters outside working hours, please email us at:</p>
+            <p style="margin-top: 10px;">
+                <strong><%= contactEmail %></strong>
+            </p>
+        </div>
+        
+        <p style="margin-top: 30px; color: #666; font-size: 0.9em;">
+            <i>This restriction helps us maintain service quality and ensure our team is available to assist you during business hours.</i>
+        </p>
+    </div>
+</body>
+</html>
